@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local experiment folders (might be kind of secret, also VERY large)
+outputs/
+offload/
+mamba/
+frozen_runs/
+wandb/
+
+# Model artifacts, which can be very large and also not needed in git
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Logs
+*.log
+
+# Environment / secrets if we have any
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+
+# Local auth / caches
+.huggingface/
+.hf/
+.kaggle/
+cache/
+
+# Data directories (raw data might be secret and not needed, but we should keep the processed sample data for testing)
+data/raw/
+data/processed/*
+!data/processed/sample/
+!data/processed/sample/**
