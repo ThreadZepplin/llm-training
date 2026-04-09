@@ -47,7 +47,7 @@ def load_quantized_base_model(model_id: str, auth_token: str | None = None):
         quantization_config=bnb_config,
         device_map="auto",
         torch_dtype=torch.bfloat16,
-        use_auth_token=auth_token,
+        token=auth_token,
     )
     model.eval()
     return model
