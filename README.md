@@ -35,6 +35,10 @@ python scripts/prepare_finetune_files.py \
 
 python scripts/train_mistral_lora.py --config configs/mistral_lora.json
 
+- To train OLMo with the same pipeline, use the new config file:
+
+python scripts/train_mistral_lora.py --config configs/olmo_lora.json
+
 6. Evaluate LoRA model
 
 python scripts/eval_mistral_lora.py \
