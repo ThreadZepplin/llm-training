@@ -4,9 +4,15 @@ from pathlib import Path
 
 import torch
 from datasets import load_dataset
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
-from peft import LoraConfig
-from trl import SFTTrainer, SFTConfig
+from transformers import (
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    BitsAndBytesConfig,
+    Trainer,
+    TrainingArguments,
+    DataCollatorForLanguageModeling,
+)
+from peft import LoraConfig, get_peft_model
 
 """This file holds the main logic for fine-tuning OLMo with LoRA."""
 
@@ -84,6 +90,24 @@ def load_train_dataset(train_path: str, tokenizer):
     return dataset.map(add_text)
 
 
+def tokenize_train_dataset(dataset, tokenizer, max_length: int):
+    def tokenize_fn(examples):
+        outputs = tokenizer(
+            examples["text"],
+            truncation=True,
+            max_length=max_length,
+            padding="max_length",
+        )
+        outputs["labels"] = outputs["input_ids"].copy()
+        return outputs
+
+    return dataset.map(
+        tokenize_fn,
+        batched=True,
+        remove_columns=dataset.column_names,
+    )
+
+
 def train_from_config(config: dict):
     if not torch.cuda.is_available():
         raise RuntimeError("CUDA GPU not available.")
@@ -95,6 +119,8 @@ def train_from_config(config: dict):
 
     tokenizer = load_tokenizer(model_id, auth_token)
     dataset = load_train_dataset(train_path, tokenizer)
+    dataset = tokenize_train_dataset(dataset, tokenizer, config["max_seq_length"])
+
     bnb_config = build_quant_config()
 
     model = AutoModelForCausalLM.from_pretrained(
@@ -107,28 +133,30 @@ def train_from_config(config: dict):
     model.config.use_cache = False
 
     peft_config = build_lora_config(config)
+    model = get_peft_model(model, peft_config)
 
-    training_args = SFTConfig(
+    training_args = TrainingArguments(
         output_dir=output_dir,
-        dataset_text_field="text",
-        max_length=config["max_seq_length"],
-        packing=False,
-        num_train_epochs=config["num_epochs"],
         per_device_train_batch_size=config["per_device_batch_size"],
         gradient_accumulation_steps=config["gradient_accumulation_steps"],
         learning_rate=config["learning_rate"],
+        num_train_epochs=config["num_epochs"],
         logging_steps=config.get("logging_steps", 1),
         save_strategy=config.get("save_strategy", "epoch"),
         report_to=config.get("report_to", "none"),
         bf16=True,
         gradient_checkpointing=True,
+        fp16=False,
     )
 
-    trainer = SFTTrainer(
+    data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
+
+    trainer = Trainer(
         model=model,
         args=training_args,
         train_dataset=dataset,
-        peft_config=peft_config,
+        data_collator=data_collator,
+        tokenizer=tokenizer,
     )
 
     trainer.train()
