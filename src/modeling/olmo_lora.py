@@ -156,7 +156,6 @@ def train_from_config(config: dict):
         args=training_args,
         train_dataset=dataset,
         data_collator=data_collator,
-        tokenizer=tokenizer,
     )
 
     trainer.train()
