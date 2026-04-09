@@ -1,0 +1,25 @@
+{
+  "model_id": "allenai/Olmo-Hybrid-7B",
+  "train_path": "data/processed/finetune_train.jsonl",
+  "output_dir": "outputs/olmo_lora_manufacturing",
+  "max_seq_length": 1024,
+  "per_device_batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "learning_rate": 0.0002,
+  "num_epochs": 3,
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "logging_steps": 1,
+  "save_strategy": "epoch",
+  "report_to": "none"
+}
