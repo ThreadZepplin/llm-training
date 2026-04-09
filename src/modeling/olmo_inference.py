@@ -32,7 +32,7 @@ def load_tokenizer(model_id: str, auth_token: str | None = None):
     tokenizer = AutoTokenizer.from_pretrained(
         model_id,
         use_fast=True,
-        use_auth_token=auth_token,
+        token=auth_token,
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token

@@ -48,7 +48,7 @@ def load_tokenizer(model_id: str, auth_token: str | None = None):
     tokenizer = AutoTokenizer.from_pretrained(
         model_id,
         use_fast=True,
-        use_auth_token=auth_token,
+        token=auth_token,
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -101,8 +101,8 @@ def train_from_config(config: dict):
         model_id,
         quantization_config=bnb_config,
         device_map="auto",
-        torch_dtype=torch.bfloat16,
-        use_auth_token=auth_token,
+        dtype=torch.bfloat16,
+        token=auth_token,
     )
     model.config.use_cache = False
 
