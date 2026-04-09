@@ -55,15 +55,30 @@ def load_tokenizer(model_id: str, auth_token: str | None = None):
     return tokenizer
 
 
+def messages_to_text(messages: list[dict]) -> str:
+    parts = []
+    for msg in messages:
+        role = msg.get("role", "").lower()
+        content = msg.get("content", "").strip()
+        if role == "system":
+            label = "System"
+        elif role == "user":
+            label = "User"
+        elif role == "assistant":
+            label = "Assistant"
+        else:
+            label = role.capitalize() or "Message"
+
+        parts.append(f"{label}: {content}")
+
+    return "\n".join(parts)
+
+
 def load_train_dataset(train_path: str, tokenizer):
     dataset = load_dataset("json", data_files=train_path, split="train")
 
     def add_text(example):
-        example["text"] = tokenizer.apply_chat_template(
-            example["messages"],
-            tokenize=False,
-            add_generation_prompt=False,
-        )
+        example["text"] = messages_to_text(example["messages"])
         return example
 
     return dataset.map(add_text)

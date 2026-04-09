@@ -61,12 +61,30 @@ def load_lora_model(base_model_id: str, adapter_path: str, auth_token: str | Non
     return tokenizer, model
 
 
+def messages_to_text(messages: list[dict]) -> str:
+    parts = []
+    for msg in messages:
+        role = msg.get("role", "").lower()
+        content = msg.get("content", "").strip()
+        if role == "system":
+            label = "System"
+        elif role == "user":
+            label = "User"
+        elif role == "assistant":
+            label = "Assistant"
+        else:
+            label = role.capitalize() or "Message"
+
+        parts.append(f"{label}: {content}")
+
+    return "\n".join(parts)
+
+
 def generate_from_messages(tokenizer, model, messages, max_new_tokens=320):
-    prompt = tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True,
-    )
+    prompt = messages_to_text(messages)
+    if not prompt.endswith("\n"):
+        prompt += "\n"
+    prompt += "Assistant: "
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     input_len = inputs["input_ids"].shape[1]
 
