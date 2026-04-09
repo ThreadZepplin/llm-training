@@ -26,7 +26,7 @@ def main():
         adapter_path=args.adapter_path,
         test_inputs=args.test_inputs,
         output_file=args.output_file,
-        token=args.auth_token,
+        token=args.hf_token,
     )
 
 if __name__ == "__main__":
