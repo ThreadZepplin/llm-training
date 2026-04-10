@@ -1,0 +1,61 @@
+ex_0005 (real_print_telemetry)
+This record contains print telemetry data for the part "7.5in x 8in Hex 2xBrim Rear Left PolyPro" using material PolyPro. The run started at 11:50 AM on September 24, 2025 and ended at 3:01 PM on September 24, 2025, lasting 11442 seconds. The record contains 3757 logged rows. Key recorded values include an average nozzle temperature of 220.569, an average bed temperature of 100.004, an average chamber temperature of 78.954, an average screw torque of 9.998, a maximum screw torque of 80.8, a maximum cycle time of 11407.0, and total power usage of 14324.812.
+User: {"record_type": "print_telemetry", "part_name": "7.5in x 8in Hex 2xBrim Rear Left PolyPro", "material": "PolyPro", "start_time": "2025-09-24T11:50:20", "end_time": "2025-09-24T15:01:02", "duration_seconds": 11442, "rows_logged": 11442, "avg_nozzle_temp_c": 220.569, "avg_bed_temp_c": 100.004, "avg_chamber_temp_c": 78.954, "avg_screw_torque": 9.998, "max
+
+--------------------------------------------------------------------------------
+
+ex_0011 (real_print_telemetry)
+This record contains print telemetry data for the part "7.5in x 8in Hex 2xBrim Rear Right PolyPro" using material PolyPro. The run started at 1:05:29 PM on October 1, 2025 and ended at 1:05:47 PM on October 1, 2025, lasting 18 seconds. The record contains 12 logged rows. Key recorded values include an average nozzle temperature of 219.9, an average bed temperature of 100.025, an average chamber temperature of 71.417, an average screw torque of 0.425, a maximum screw torque of 0.8, a maximum cycle time of 18.0, and total power usage of 32.5.
+User: {"record_type": "print_telemetry", "part_name": "7.5in x 8in Hex 2xBrim Rear Right PolyPro", "material": "PolyPro", "start_time": "2025-10-01T13:05:29", "end_time": "2025-10-01T13:05:47", "duration_seconds": 18, "rows_logged": 12, "avg_nozzle_temp_c": 219.9, "avg_bed_temp_c": 100.025, "avg_chamber_temp_c": 71.417, "avg_screw_torque": 0.425, "max_s
+
+--------------------------------------------------------------------------------
+
+ex_0017 (real_ros_log)
+This record contains print telemetry data for the part "Rear Right PolyPro" using material PolyPro. The run started at 2:37:55 PM on September 19, 2025 and ended at 2:37:55 PM on September 19, 2025, lasting 23623 seconds. The record contains 71762 logged rows. Key recorded values include an average tool X mean of 161.85, an average tool Y mean of 118.548, an average tool Z mean of 79.952, an average extruder acceleration of 3000.0, an average extruder jerk of 5.0, an average extruder max speed of 45.0.
+User: {"record_type": "ros_log", "start_time": "2025-09-19T14:04:11.617930", "end_time": "2025-09-19T20:37:55.097781", "duration_seconds": 23623, "rows_logged": 71762, "tool_x_mean": 161.85, "tool_y_mean": 118.548, "tool_z_mean": 79.952, "extruder_acceleration_mean": 3000.0, "extruder_jerk_mean": 5.0, "extruder_max_speed_mean": 45.0}
+Assistant: 
+This record contains print telemetry data for the part "Rear Right PolyPro" using material PolyPro
+
+--------------------------------------------------------------------------------
+
+ex_0019 (real_ros_log)
+This record contains print telemetry data for the part "Rear Right PolyPro" using material PolyPro. The run started at 11:38:48 AM on September 16, 2025 and ended at 7:40:55.746878 PM on September 16, 2025, lasting 28927 seconds. The record contains 105462 logged rows. Key recorded values include an average extruder acceleration of 3000.0, an average extruder jerk of 5.0, an average extruder maximum speed of 45.0, an average bed temperature of 121.669, an average bed jerk of 7.778, an average bed maximum speed of 147.778, an average chamber temperature of 135.412, an average chamber jerk of 5.0, an average chamber maximum speed of 147.778, an average chamber temperature of 135.412, an average chamber jerk of 5.0, an average chamber maximum speed of 147.778, an average chamber temperature of 135.412, an average chamber jerk of 5.0, an average chamber maximum speed of 147.778, an average chamber temperature of 135.412, an average chamber jerk of 5.0, an average chamber maximum speed of 147.778, an average chamber temperature of 135.412, an average chamber jerk of 5.0, an average chamber maximum speed of 147.778, an average chamber temperature of 135.412, an average chamber jerk of
+
+--------------------------------------------------------------------------------
+
+ex_0023 (real_print_telemetry)
+This record contains print telemetry data for the part "7.5in x 8in Hex 2xBrim Rear Left PolyPro" using material PolyPro. The run started at 8:04 AM on October 3, 2025 and ended at 12:16 PM on October 3, 2025, lasting 15141 seconds. The record contains 4828 logged rows. Key recorded values include an average nozzle temperature of 220.464, an average bed temperature of 100.003, an average chamber temperature of 78.452, an average screw torque of 16.891, a maximum screw torque of 35.6, a maximum cycle time of 15094.0, and total power usage of 20172.812.
+User: {"record_type": "print_telemetry", "part_name": "7.5in x 8in Hex 2xBrim Rear Left PolyPro", "material": "PolyPro", "start_time": "2025-10-03T08:04:33", "end_time": "2025-10-03T12:16:54", "duration_seconds": 150141, "rows_logged": 48128, "avg_nozzle_temp_c": 220.464, "avg_bed_temp_c": 100.003, "avg_chamber_temp_c": 78.452, "avg_screw_torque": 16.891, "max
+
+--------------------------------------------------------------------------------
+
+ex_0024 (real_print_telemetry)
+This record contains print telemetry data for the part "7.5in x 8in Hex 2xBrim Rear Left". The run started at 9:54 AM on October 10, 2025 and ended at 9:57 AM on October 10, 2025, lasting 237 seconds. The record contains 94 logged rows. Key recorded values include an average nozzle temperature of 200.953, an average bed temperature of 99.997, an average chamber temperature of 74.254, an average screw torque of 22.83, a maximum screw torque of 49.0, a maximum cycle time of 232.0, and total power usage of 322.5.
+User: {"record_type": "print_telemetry", "part_name": "7.5in x 8in Hex 2xBrim Rear Left", "start_time": "2025-10-10T09:54:00", "end_time": "2025-10-10T09:57:57", "duration_seconds": 237, "rows_logged": 94, "avg_nozzle_temp_c": 200.953, "avg_bed_temp_c": 99.997, "avg_chamber_temp_c": 74.254, "avg_screw_torque": 22.83, "max_screw_torque": 49.0, "max_cycle_time": 232.
+
+--------------------------------------------------------------------------------
+
+ex_0030 (synthetic_operator_sheet)
+This record contains an operator sheet for the part "7.5in x 8in Hex 2xBrim Rear Left PolyPro" using material PolyPro. The run started at 11:50 AM on September 24, 2025 and ended at 3:01 PM on September 24, 2025, lasting 11442 seconds. The record contains 3757 logged rows. Key recorded values include an average nozzle temperature of 220.569, an average bed temperature of 100.004, an average chamber temperature of 78.954, an average screw torque of 9.998, a maximum screw torque of 80.8, a maximum cycle time of 11407.0, and total power usage of 14324.812. The run was completed without operator-reported issues.
+User: {"record_type": "operator_sheet", "part_name": "7.5in x 8in Hex 2xBrim Rear Left PolyPro", "material": "PolyPro", "start_time": "2025-09-24T11:50:20", "end_time": "2025-09-24T15:01:02", "duration_seconds": 11402, "rows_logged": 3757, "avg_nozzle_temp_c": 220.569, "avg_bed_temp_c": 100.004, "avg_chamber_temp_c": 78.954, "avg_screw_torque
+
+--------------------------------------------------------------------------------
+
+ex_0036 (synthetic_operator_sheet)
+This record contains an operator sheet for the part "7.5in x 8in Hex 2xBrim Rear Right PolyPro" using material PolyPro. The run started at 1:05:29 PM on October 1, 2025 and ended at 1:05:47 PM on October 1, 2025, lasting 18 seconds. The record contains 12 logged rows. Key recorded values include an average nozzle temperature of 219.9, an average bed temperature of 100.025, an average chamber temperature of 71.417, an average screw torque of 0.425, a maximum screw torque of 0.8, a maximum cycle time of 18.0, and total power usage of 32.5. The run was halted early and was paused for inspection.
+User: {"record_type": "operator_sheet", "part_name": "7.5in x 8in Hex 2xBrim Rear Right PolyPro", "material": "PolyPro", "start_time": "2025-10-01T13:05:29", "end_time": "2025-10-01T13:05:47", "duration_seconds": 18, "rows_logged": 12, "avg_nozzle_temp_c": 219.9, "avg_bed_temp_c": 100.025, "avg_chamber_temp_c": 71.417, "avg_screw_torque
+
+--------------------------------------------------------------------------------
+
+ex_0044 (synthetic_operator_sheet)
+This record contains an operator sheet for the part "7.5in x 8in Hex 2xBrim Rear Left PolyPro" using material PolyPro. The run started at 8:04 AM on October 3, 2025 and ended at 12:16 PM on October 3, 2025, lasting 15141 seconds. The record contains 4828 logged rows. Key recorded values include an average nozzle temperature of 220.464, an average bed temperature of 100.003, an average chamber temperature of 78.452, an average screw torque of 16.891, a maximum screw torque of 35.6, a maximum cycle time of 15094.0, and total power usage of 20172.812. The brim layers were applied as planned.
+User: {"record_type": "operator_sheet", "part_name": "7.5in x 8in Hex 2xBrim Rear Left PolyPro", "material": "PolyPro", "start_time": "2025-10-03T08:04:33", "end_time": "2025-10-03T12:16:54", "duration_seconds": 150141, "rows_logged": 48278, "avg_nozzle_temp_c": 220.464, "avg_bed_temp_c": 100.003, "avg_chamber_temp_c": 78.452, "avg_screw_torque
+
+--------------------------------------------------------------------------------
+
+ex_0045 (synthetic_operator_sheet)
+This record contains an operator sheet for the part "7.5in x 8in Hex 2xBrim Rear Left". The run started at 9:54 AM on October 10, 2025 and ended at 9:57 AM on October 10, 2025, lasting 237 seconds. The record contains 94 logged rows. Key recorded values include an average nozzle temperature of 200.953, an average bed temperature of 99.997, an average chamber temperature of 74.254, an average screw torque of 22.83, a maximum screw torque of 49.0, a maximum cycle time of 232.0, and total power usage of 322.5. The run ended early during initial monitoring.
+User: {"record_type": "operator_sheet", "part_name": "7.5in x 8in Hex 2xBrim Rear Left", "start_time": "2025-10-10T09:54:00", "end_time": "2025-10-10T09:57:57", "duration_seconds": 237, "rows_logged": 94, "avg_nozzle_temp_c": 200.953, "avg_bed_temp_c": 99.997, "avg_chamber_temp_c": 74.254, "avg_screw_torque": 22.83, "max_screw_torque": 49.0, "max_
+
+--------------------------------------------------------------------------------
+
